@@ -46,6 +46,8 @@ RSpec.describe 'employee show page' do
 
     visit "/employees/#{ron.id}"
 
+    expect(Tick.ticket_sort.first).to eq(ticket_3)
+    expect(Tick.ticket_sort.last).to eq(ticket_1)
     expect(page).to have_content("laptop not charging")
   end
 
