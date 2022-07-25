@@ -49,6 +49,7 @@ RSpec.describe 'employee show page' do
     expect(Ticket.ticket_sort.first).to eq(ticket_3)
     expect(Ticket.ticket_sort.last).to eq(ticket_1)
     expect(page).to have_content("laptop not charging")
+    save_and_open_page
   end
 
 end
