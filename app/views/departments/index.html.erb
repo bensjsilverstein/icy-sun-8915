@@ -1,0 +1,8 @@
+<h1>Departments</h1>
+
+<% @departments.each do |department| %>
+  <div class="department" id = "department-<%= department.id %>">
+    <h3><p><%= "Department: #{department.name} → Floor: #{department.floor}" %></p></h3>
+    <p><%= "Employees: #{department.employees.flat_map{|employee|employee.name}}" %></p>
+  </div>
+<% end %>
